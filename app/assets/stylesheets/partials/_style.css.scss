@@ -1,0 +1,16 @@
+body {
+  padding-top: 51px;
+
+  .translation_missing {
+    color: red;
+  }
+
+  .row {
+    &.post {
+      margin: 10px 0 10px 0;
+    }
+    &.category {
+      margin: 10px 0 10px 0;
+    }
+  }
+}

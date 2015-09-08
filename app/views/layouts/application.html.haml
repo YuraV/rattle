@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Rattle
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = render 'layouts/navigation'
+    .container-fluid
+      = render 'layouts/messages'
+      .row
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+          = yield

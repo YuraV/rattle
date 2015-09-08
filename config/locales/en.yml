@@ -1,0 +1,31 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+en:
+  layouts:
+    navigation:
+      logged_as: "Logged As:"
+      edit_profile: Edit Profile
+      log_out: Log Out
+      sign_up: Sign Up
+      log_in: Log In
+  hello: "Hello world"
+  categories:
+    index:
+      add_new_article: Create New Article
+      articles: Articles
+    category:
+      description: "Description:"
+    show:
+      add_new_post: Create Article
+
+  words:
+    up_vote: Up Vote
+    down_vote: Down Vote
+    edit: Edit
+    destroy: Destroy
+    back: Back
+    new: New
+    description: Description
+    posted_by: "Posted By: %{owner}"
+    thank_you_for_voting: Thank You For Voting
+    votes: "Votes %{votes}"

@@ -1,0 +1,21 @@
+.row.post.bg-info
+  .col-sm-9
+    = post.title
+    .description
+      = t('words.description')
+      = post.body
+    .row
+      .col-xs-8.col-sm-8
+        - if current_user
+          = link_to t('words.up_vote'), vote_category_post_path(category, post, type: :up), class: :vote_link, method: :post
+          \|
+          = link_to t('words.down_vote'), vote_category_post_path(category, post, type: :down), class: :vote_link, method: :post
+        \|
+        %span= t('words.votes', votes: post.reputation_for(:votes).to_i)
+        - if current_user && post.user == current_user
+          \|
+          = link_to t('words.edit'), edit_category_post_path(category, post), rel: :facebox
+          \|
+          = link_to t('words.destroy'), category_post_path(category, post), method: :delete, :data => { :confirm => 'Are you sure?' }
+        \|
+        %span= t('words.posted_by', owner: post.user.email) if post.user

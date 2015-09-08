@@ -1,0 +1,13 @@
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Body:
+  = @post.body
+%p
+  %b Published:
+  = @post.published
+
+= link_to 'Edit', edit_category_post_path(@post)
+\|
+= link_to 'Back', category_path(category)
