@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = PostCreatorService.create(user: current_user, category: category, params: params[:post])
+    @post = Post::Creator.create(user: current_user, category: category, params: params[:post])
     respond_with category, @post do |format|
       format.html {
          render category_posts, layout: false if request.xhr?

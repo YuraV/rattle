@@ -1,4 +1,4 @@
-class PostCreatorService
+class Post::Creator
   attr_reader :user, :category, :post
 
   def self.create(options = {})
